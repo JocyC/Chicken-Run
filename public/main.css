@@ -1,0 +1,262 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600&family=Prosto+One&display=swap");
+
+html {
+  font-size: 100%;
+}
+
+:root {
+  /* colors */
+  --primary-50: hsla(97, 13%, 80%, 1);
+  --primary-100: hsla(113, 13%, 75%, 1);
+  --primary-200: hsla(125, 15%, 70%, 1);
+  --primary-300: hsla(133, 18%, 59%, 1);
+  --primary-400: hsla(150, 15%, 49%, 1);
+  --primary-500: hsla(165, 19%, 40%, 1);
+  --primary-600: hsla(174, 19%, 33%, 1);
+  --primary-700: hsla(186, 21%, 26%, 1);
+  --primary-800: hsla(192, 21%, 25%, 1);
+  --primary-900: hsla(201, 20%, 23%, 1);
+  /* grey */
+  --grey-50: #fafafa;
+  --grey-100: #f4f4f5;
+  --grey-200: #e4e4e7;
+  --grey-300: #d4d4d8;
+  --grey-400: #a1a1aa;
+  --grey-500: #71717a;
+  --grey-600: #52525b;
+  --grey-700: #3f3f46;
+  --grey-800: #27272a;
+  --grey-900: #18181b;
+  /* teyvat colors */
+  --anemo: #56ecda;
+  --pyro: #ff934e;
+  --geo: #eab100;
+  --hydro: #05ddf4;
+  --dendro: #08c082;
+  --electro: #a555dc;
+  --cryo: #dafaf7;
+  /* status colors */
+  --ongoing: rgba(133, 10, 10, 0.656);
+  --next: rgb(231, 196, 0);
+  --done: rgb(1, 99, 1);
+  /* other colors */
+  --black: #222;
+  --white: #fff;
+  --red: #e63946;
+  --yellow: gold;
+  --five-star: linear-gradient(to bottom, rgb(159, 108, 65), rgb(235, 162, 97));
+  --four-star: linear-gradient(
+    to bottom,
+    rgb(113, 89, 150),
+    rgb(151, 114, 205)
+  );
+  /* fonts */
+  --headingFont: "Cinzel Decorative", cursive;
+  --bodyFont: "Prosto One", cursive;
+  --small-text: 0.875rem;
+  --extra-small-text: 0.7em;
+  /* rest of the vars */
+  --backgroundColor: var(--grey-50);
+  --textColor: var(--grey-900);
+  --borderRadius: 0.8rem;
+  --letterSpacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1120px;
+  --fixed-width: 500px;
+  --fluid-width: 90vw;
+  --breakpoint-lg: 992px;
+  --nav-height: 6rem;
+  /* box shadow */
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0, 06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0, 06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+body {
+  background: var(--backgroundColor);
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--textColor);
+}
+
+hr {
+  border: 0.3px solid var(--grey-300);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  max-width: 40em;
+  text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  margin-bottom: 1.38rem;
+  font-family: var(--headingFont);
+  font-weight: 700;
+  line-height: 1.8;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+  color: var(--primary-700);
+}
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+h2 {
+  font-size: 2.441rem;
+}
+h3 {
+  font-size: 1.953rem;
+}
+h4 {
+  font-size: 1.563rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+  letter-spacing: var(--letterSpacing);
+}
+a,
+button {
+  line-height: 1.15;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* buttons */
+.btn {
+  cursor: pointer;
+  color: var(--white);
+  background: var(--primary-500);
+  border: transparent;
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding: 0.375rem 0.75rem;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition);
+  text-transform: capitalize;
+  display: inline-block;
+}
+.btn:hover {
+  background: var(--primary-700);
+  box-shadow: var(--shadow-3);
+}
+/* loading */
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loading {
+  width: 6rem;
+  height: 6rem;
+  border: 5px solid --grey-400;
+  border-radius: 50%;
+  border-top-color: var(--primary-50);
+  animation: spinner 2s linear infinite;
+}
+.loading-center {
+  margin: 0 auto;
+}
+
+/* special for chicken run */
+body {
+  background: var(--grey-200);
+}
+h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+h4 {
+  text-align: center;
+}
+.chicken-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  justify-content: center;
+}
+.chicken {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media screen and (min-width: 689px) {
+  .chicken {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.single-chicken {
+  text-align: center;
+  line-height: 10px;
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  margin: 0rem 2rem 2rem 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: var(--bodyFont);
+  min-width: 20rem;
+}
+.chicken-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.single-chicken-container {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-rows: auto 1fr 1fr;
+  row-gap: 1rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.edit-link {
+  border-radius: var(--borderRadius);
+  background: var(--primary-100);
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 0.3rem;
+  min-width: 4rem;
+  color: var(--primary-500);
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.delete-btn {
+  border-radius: var(--borderRadius);
+  border: solid 1px var(--primary-100);
+  background: transparent;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 0.3rem;
+  min-width: 4rem;
+  color: var(--primary-700);
+  font-weight: 900;
+  text-transform: capitalize;
+}
