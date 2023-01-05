@@ -2,7 +2,7 @@
 
 A REST API built with NodeJS (Express.js & MongoDB)
 
-#### For Clac des Doigts Team
+### Pour l'équipe Clac des Doigts
 
 Afin de mieux intégrer votre demande BONUS, j'ai décidé d'apporter un petit changement dans la conception, tout en restant capable de réaliser parfaitement la fonctionnalité de base : ajouter des steps à un objet chicken spécifique.
 
@@ -14,7 +14,7 @@ Montré dans l'IU comme un objet chicken spécifique : /api/v1/chicken/:id
 
 En tout cas, j'espère que vous me pardonnerez d'avoir pris la liberté de changer la structure :)
 
-#### How and where to run
+### How and where to run
 
 A simple UI is written for this API to show some of the functionality. The app is currently hosted on localhost:3000, therefore, in order to see the app working, please run npm install && npm start in your terminal, and open http://localhost:3000 in your browser.
 
@@ -22,7 +22,7 @@ The home page (http://localhost:3000) shows the farmyard of all the chicken. Cli
 
 The detail page shows the detailed information of each chicken. Click "run" to add the steps of the chicken by 1. When the chicken only made the first step, turn the status isRunning to true too.
 
-#### Database
+### Database
 
 The database this API connects to is MongoDB, using mongoose library.
 
