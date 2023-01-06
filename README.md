@@ -16,7 +16,7 @@ En tout cas, j'espère que vous me pardonnerez d'avoir pris la liberté de chang
 
 ### How and where to run
 
-A simple UI is written for this API to show some of the functionality. The app is currently hosted on localhost:3000, therefore, in order to see the app working, please run npm install && npm start in your terminal, and open http://localhost:3000 in your browser.
+A simple UI is written for this API to show some of the functionality. The app is currently hosted on localhost:3000, therefore, in order to see the app working, please clone this repository, run npm install && npm start in your terminal, and open http://localhost:3000 in your browser.
 
 The home page (http://localhost:3000) shows the farmyard of all the chicken. Click on the "detail" button to enter the detail page ; click on the "delete" button to delete this chicken.
 
@@ -25,6 +25,8 @@ The detail page shows the detailed information of each chicken. Click "run" to a
 ### Database
 
 The database this API connects to is MongoDB, using mongoose library.
+
+Since the api is not deployed, I created a **temporary** (valid until 13/01) mongoDB access credentials in env file.
 
 The original data shown on the home page was created with POST method, with the help of Postman. (Our 5 strong runner chicken were named after some of the Fatui Harbingers xD)
 
